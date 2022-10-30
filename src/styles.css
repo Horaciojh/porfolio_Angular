@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+hr{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+    height: 0.5rem;
+    /* background-color: black; */
+    background: linear-gradient(50deg, #03a6fa 45%, #1b1e21 50%);
+  }
+
+  /* icono de loguin */
+i.bi.bi-person-check-fill{
+  font-size: 1.3rem;
+  color: green;
+  visibility: visible;
+}
+
+i.bi.bi-person-x-fill{
+  visibility: visible;
+}
+
+i.bi.bi-person-x-fill:hover {
+  color: #E4405F;
+}
+
+
+/* Colores y tamaños de iconos redes sociales Banner*/
+.bi.bi {
+  font-size: 1.3rem;
+  color: rgb(255, 255, 255);
+}
+
+.cuadrado{
+  border-color: white;
+  border-radius: 20%;
+}
+
+i.bi.bi-instagram:hover {
+  color: #E4405F
+}
+
+i.bi.bi-facebook:hover {
+  color: #4267B2
+}
+
+i.bi.bi-github:hover {
+  color: black;
+}
+
+i.bi.bi-linkedin:hover {
+  color: #4267B2;
+}
+
+
+
+i.bi.bi-twitter:hover {
+  color: #4267B2;
+}
+
+i.bi.bi-google:hover {
+  color: #BB001B
+}
+i.bi.bi-file-earmark-arrow-down:hover {
+  color: green;
+}
+
+/* Iconos modificacion y eliminacion de datos */
+.bi.bi-pencil-fill{
+  color:  #03a6fa;
+  /* color: #1b1e21; */
+  font-size: 1rem;
+  padding: 0.1rem;
+  margin-left: 1rem;
+  height: 5%;
+  width: auto;
+  visibility: visible; /* oculta los iconos */
+ 
+}
+
+.bi.bi-trash{
+  color:  #03a6fa;
+  font-size: 1rem;
+  padding: 0.1rem;
+  margin-left: 1rem;
+  height: 5%;
+  width: auto;
+  visibility: visible;  /* oculta los iconos */
+}
+
+.bi.bi-x-circle{
+  color:  #03a6fa;
+  font-size: 1rem;
+  padding: 0.1rem;
+  margin-left: 1rem;
+  height: 5%;
+  width: auto;
+}

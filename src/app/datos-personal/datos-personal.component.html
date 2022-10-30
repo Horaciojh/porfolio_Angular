@@ -1,0 +1,29 @@
+<!-- Datos Personale -->
+<hr>
+<button type="button" (click)="mostrar=!mostrar">Editar </button>
+<section>
+    <h3 style="text-align:center; margin-top: 20px;">Datos Persanales</h3>
+    <div class="card mb-3 my-3 mx-3" style="max-width:fit-content;">
+      <div class="row g-0">
+        <div class="col-md-4 text-center my-auto">
+          <img class="img-fluid rounded-start mx-auto d-block foto-datos" src="assets/img/HoracioDatos.jpg" alt="...">
+          <i class="bi bi-pencil-fill btn" data-bs-toggle="modal" data-bs-target="#Foto" *ngIf="mostrar"></i><i
+          class="bi bi-trash btn" *ngIf="mostrar"></i>
+        </div>
+        <div class="col-md-8 ">
+          <div class="card-body">
+            <h5 class="card-title">Datos Personales<i class="bi bi-pencil-fill btn" data-bs-toggle="modal"
+              data-bs-target="#DatosPersonal" *ngIf="mostrar"></i></h5>
+            <p class="card-text">Herrlein Horacio</p>
+            <p class="card-text">Nací el 00 de Mayo de 19xx en Argentina donde actualmente resido</p>
+            <p class="card-text">Tengo xx años de edad. </p>
+            <p class="card-text">Actualmente resido en la ciudad de Paraná Entre Ríos</p>
+            <p class="card-text">Telefono de contacto +54 9 343 51xxxx</p>
+            <p class="card-text">Me considero una persona responsable, proactiva, dispuesto a enfrentar nuevos desafios. Con capacidad en la resolucion de conflictos y trabajo en equipo</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veniam consequatur odit eius odio iusto dolorem. Perferendis corrupti fuga magni ab repellat praesentium saepe tenetur mollitia ea odit, vitae reiciendis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Fin datos personales -->
