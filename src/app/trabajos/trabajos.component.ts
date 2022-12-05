@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TitleStrategy } from '@angular/router';
+import { DatosService } from '../servicios/datos.service';
 
 @Component({
   selector: 'app-trabajos',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrabajosComponent implements OnInit {
 
-  constructor() { }
+    trabajos : any;
+  constructor(private datos:DatosService) { }
 
   ngOnInit(): void {
+    this.datos.getDates().subscribe(data => {
+      this.trabajos = data.trabajo
+    })
   }
 
 }

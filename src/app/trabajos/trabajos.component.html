@@ -1,16 +1,16 @@
-<section>
+
     <!-- Experiencia laboral -->
     <hr color="black" size="5">
     <h3 style="text-align:center; margin-top: 20px;">Experiencia Laboral<i class="bi bi-pencil-fill btn"
       data-bs-toggle="modal" data-bs-target="#ExperienciaLaboral"></i></h3>
-
-    <!-- Tarjetas laborales 1-->
-    <div class="accordion mb-5" id="accordionExample">
+      <div *ngFor="let empleos of trabajos">
+    <!-- Tarjetas laborales-->
+    <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <h6>Transporte Mariano Moreno S.R.L</h6>
+            <h6>{{empleos.empresa}}</h6>
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
@@ -19,172 +19,13 @@
             <div class="card mb-3 my-3 mx-3" style="max-width:fit-content;">
               <div class="row g-0">
                 <div class="col-md-4 text-center my-auto">
-                  <img src="assets/img/Transporte_Mariano_Moreno_Parana.png" class="img-fluid rounded-start" alt="...">
+                  <img [src]="empleos.img" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body color-card">
-                    <h5 class="card-title">Transporte Mariano Moreno S.R.L</h5>
-                    <p class="card-text">Ingrese en 1.984 a la Empresa de Transporte urbano de Pasajeros “Mariano Moreno
-                      S. R. L.” la cual prestaba servicio en la ciudad de Paraná Entre Rios, Argentina. Cumpliendo la
-                      función de chofer, desde la fecha de ingreso hasta 1992.</p>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Tarjetas laborales 2-->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <h6>TIA S.A</h6>
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="card mb-3 my-3 mx-3" style="max-width:fit-content;">
-              <div class="row g-0">
-                <div class="col-md-4 text-center my-auto">
-                  <img src="assets/img/Logo-Tia-SA.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body color-card">
-                    <h5 class="card-title">TIA S.A</h5>
-                    <p class="card-text">Ingreso en Junio de 1.993, a la Empresa “TIA S. A”, desempeñando las funciones
-                      de: Recepcionista de Mercadería, Administrativo, Jefe de Ventas en los sectores non food,
-                      comestibles y productos frescos, en la ciudad de Paraná, Trelew y Resistencia.</p>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Tarjetas laborales 3-->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <h6>Supermercados Norte</h6>
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <div class="card mb-3 mx-3" style="max-width:fit-content;">
-              <div class="row g-0">
-                <div class="col-md-4 text-center my-auto">
-                  <img src="assets/img/Norte.png" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body color-card">
-                    <h5 class="card-title">Supermercados Norte</h5>
-                    <p class="card-text">Posteriormente “TIA S.A.” es adquirida por Supermercados Norte en el cual seguí
-                      desempeñando esta tarea, hasta Agosto del 2002 que fui promovido a Gerente de local.
-                      Desarrollando tareas Técnicas y Operativas: en la recepción, control, almacenamiento y despacho de
-                      mercaderías a las distintas sucursales. Tareas administrativas: control de ordenes de compras y
-                      facturación, grabación de pedidos, control de inventarios, ajuste de stock, etc.
-                      En el desempeño de la función de Management: manejo de personal, organización y coordinación de
-                      tareas y funciones, exhibición de mercaderías, precios y ofertas, control y supervisión de líneas
-                      de cajas, arqueos, control y administración de gasto, resultados de ejercicios, inventarios,
-                      control y reducción de merma, etc.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Tarjetas laborales 4-->
-      <div class="accordion mb-5" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-              <h6>Carrefour</h6>
-            </button>
-          </h2>
-          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div class="card mb-3 my-3 mx-3" style="max-width:fit-content;">
-                <div class="row g-0">
-                  <div class="col-md-4 text-center my-auto">
-                    <img src="assets/img/carrefour.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body color-card">
-                      <h5 class="card-title">Carrefour</h5>
-                      <p class="card-text">A fines de 1999 Norte comenzó su proceso de fusión con la cadena Carrefour en
-                        la cual sigui desempeñando las miosmas funciones que realizaba en Norte S.A</p>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Tarjetas laborales 5-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              <h6>Renacer Supermercado Mayorista</h6>
-            </button>
-          </h2>
-          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div class="card mb-3 mx-3" style="max-width:fit-content;">
-                <div class="row g-0">
-                  <div class="col-md-4 text-center my-auto">
-                    <img src="assets/img/Renacer.jpg" class="img-fluid rounded-start " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body color-card">
-                      <h5 class="card-title">Renacer Supermercado Mayorista</h5>
-                      <p class="card-text">El 2 de Enero del 2006 ingreso en Basso Representación de la ciudad de Paraná
-                        Entre Ríos, desarrollando tareas de recepción de mercadería, carga y control de stock, pedidos a
-                        proveedores, actualizaciones de precios y costos, exhibición de mercadería, organización de
-                        tareas y funciones, manejo de personal, etc. </p>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Tarjetas laborales 6-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingSix">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-              <h6>Transporte Escolar EMOJI</h6>
-            </button>
-          </h2>
-          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div class="card mb-3 mx-3" style="max-width:fit-content;">
-                <div class="row g-0">
-                  <div class="col-md-4 text-center my-auto">
-                    <img src="assets/img/LogoTransporte.jpg" class="img-fluid rounded-start " alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body color-card">
-                      <h5 class="card-title">Transporte Escolar EMOJI</h5>
-                      <p class="card-text">En la actualidad tengo un emprendimiento destinado al traslado de personas y
-                        alumnos a distintos establecimientos educativos y deportivos</p>
-
-                    </div>
+                    <h5 class="card-title">{{empleos.empresa}}</h5>
+                    <p class="card-text">{{empleos.tareas}}</p>
+                    <p class="card-text">Desde el {{empleos.inicio}} hasta el {{empleos.fin}} </p>
                   </div>
                 </div>
               </div>
@@ -193,5 +34,6 @@
         </div>
       </div>
     </div>
-    </section>
+      
+
   <!-- Fin Experiencia laboral -->

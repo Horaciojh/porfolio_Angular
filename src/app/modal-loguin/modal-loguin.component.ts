@@ -12,4 +12,5 @@ export class ModalLoguinComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
