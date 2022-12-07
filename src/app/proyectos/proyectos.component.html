@@ -1,54 +1,22 @@
 <hr>
 <!-- Proyectos realizados -->
-<section>
-    <div class="card mb-3 my-3 mx-3">
-        <h3 style="text-align:center; margin-top: 20px;">Proyectos Realizados <i class="bi bi-pencil-fill btn"
-                data-bs-toggle="modal" data-bs-target="#ProyectosRealizados"></i></h3>
-        <!-- Proyecto 1 -->
-        <div class="container mt-3">
-            <div class="row">
-                <div class="col mb-3">
-                    <div class="card" style="width: 18rem;"><i class="bi bi-trash btn"></i>
-                        <img src="assets/img/Proyecto-1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Porfolio Personal</h5>
-                            <p class="card-text">Porfolio personal realizado como trabajo final en el curso Argentina
-                                Programa en el
-                                año 2022 </p><br><br><br>
-                            <a href="#" class="btn btn-primary">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 2 -->
-                <div class="col mb-3">
-                    <div class="card" style="width: 18rem;"><i class="bi bi-trash btn"></i>
-                        <img src="assets/img/Proyecto-2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">PsicoAlem</h5>
-                            <p class="card-text">Esta página se realizó en el año 2012 y en la actualidad no se
-                                encuentra en linea,
-                                ya que en la misma se utilizó Flash y este no es compatible con los navegadores
-                                actuales.
-                            </p>
-                            <a href="#" class="btn btn-primary">Ver Más</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Proyecto 3 -->
-                <div class="col mb-3">
-                    <div class="card" style="width: 18rem;"><i class="bi bi-trash btn"></i>
-                        <img src="assets/img/Proyecto-3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Coaching</h5>
-                            <p class="card-text">Pagina en desarrollo utilizando Word Press, en la que se ofrecera un
-                                acompañamiento
-                                en el desarrollo laboral y personal. La misma no se encuentra en linea por el momento.
-                            </p> <br>
-                            <a href="#" class="btn btn-primary">Ver Más</a>
-                        </div>
+<div class="card mb-3 my-3 mx-3">
+    <h3 style="text-align:center; margin-top: 20px;">Proyectos Realizados <i class="bi bi-pencil-fill btn"
+            data-bs-toggle="modal" data-bs-target="#ProyectosRealizados"></i></h3>
+    <!-- Proyecto 1 -->
+
+    <div class="container mt-3">
+        <div class="row mb-3">
+            <div class="col-lg-4 col-md-12 col-mb-4 mt-3" *ngFor="let misProyectos of proyectosRealizados">
+                <div class="card h-100" style="width: 20rem"><i class="bi bi-trash btn"></i>
+                    <img [src]="misProyectos.img" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{misProyectos.nombre}}</h5>
+                        <p class="card-text">{{misProyectos.detalle}} </p><br><br><br>
+                        <a href="#" class="btn btn-primary">Ver Más</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>

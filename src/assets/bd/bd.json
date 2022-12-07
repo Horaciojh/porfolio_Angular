@@ -182,6 +182,81 @@
         "nombre": "RECLUTAMIENTO",
         "porcentaje": "5"
     }    
-]
+],
 
+"experiencia":[
+    {
+        "id":1,
+        "nombre":"porfolio Personal",
+        "detalle":"Porfolio personal realizado como trabajo final en el curso Argentina Programa en el año 2022.",
+        "img": "../assets/img/Proyecto-1.jpg"
+    },
+
+    {
+        "id":2,
+        "nombre":"psicoAlem",
+        "detalle":"Esta página se realizó en el año 2012 y en la actualidad no se encuentra en linea, ya que en la misma se utilizó Flash y este no es compatible con los navegadores actuales.",
+        "img": "../assets/img/Proyecto-2.jpg"
+    },
+
+    {
+        "id":3,
+        "nombre":"Coaching",
+        "detalle":"Pagina en desarrollo utilizando Word Press, en la que se ofrecera un acompañamiento en el desarrollo laboral y personal. La misma no se encuentra en linea por el momento.",
+        "img": "../assets/img/Proyecto-3.jpg"
+
+    }
+
+],
+
+"social":[
+    {
+        "id": "1",
+        "nombre": "Faceboock",
+        "direccion": "www:/faceboock.com",
+        "logo": "../assets/img/Proyecto-3.jpg",
+        "clase": "bi bi-facebook"
+    },
+
+    {
+        "id": "2",
+        "nombre": "Twitter",
+        "direccion": "www:/faceboock.com",
+        "logo": "../assets/img/Proyecto-3.jpg",
+        "clase": "bi bi-twitter"
+    },
+
+    {
+        "id": "3",
+        "nombre": "Gmail",
+        "direccion": "www:/faceboock.com",
+        "logo": "../assets/img/Proyecto-3.jpg",
+        "clase": "bi bi-google"
+    },
+
+    {
+        "id": "4",
+        "nombre": "Instagram",
+        "direccion": "www:/faceboock.com",
+        "logo": "../assets/img/Proyecto-3.jpg",
+        "clase": "bi bi-instagram"
+    },
+
+    {
+        "id": "5",
+        "nombre": "Linkedin",
+        "direccion": "www:/faceboock.com",
+        "logo": "../assets/img/Proyecto-3.jpg",
+        "clase": "bi bi-linkedin"
+    },
+
+    {
+        "id": "6",
+        "nombre": "Github",
+        "direccion": "www:/faceboock.com",
+        "logo": "../assets/img/Proyecto-3.jpg",
+        "clase": "bi bi-github"
+    }
+
+]
 }
