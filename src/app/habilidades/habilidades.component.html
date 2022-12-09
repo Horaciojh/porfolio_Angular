@@ -5,9 +5,9 @@
     <h5 class="texto-barra mt-3 mb-2 text-center">MANEJO DE SOFTWARE<i class="bi bi-pencil-fill btn"
         data-bs-toggle="modal" data-bs-target="#HabilidadesSoftware"></i></h5>
     <div class="row d-flex justify-content-center text-center mt-4">
-      <div class="col" *ngFor="let c of b">
-        <h6>{{c.nombre}}</h6>
-        <div class="progress-circle progress-{{c.porcentaje}}"><span>{{c.porcentaje}}</span></div>
+      <div class="col" *ngFor="let habil of habilidad_Sof">
+        <h6>{{habil.nombre}}</h6>
+        <div class="progress-circle progress-{{habil.porcentaje}}"><span>{{habil.porcentaje}}</span></div>
       </div>
     </div>
     <h5 class="texto-barra mt-3 mb-2 text-center mt-5">MANEJO DE RRHH<i class="bi bi-pencil-fill btn"

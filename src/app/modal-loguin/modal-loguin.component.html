@@ -1,46 +1,65 @@
 <!-- Modal del loguin -->
 <div class="modal fade" id="loguinModal" tabindex="-1" aria-labelledby="loguinModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Diseño de loguin -->
-          <div class="container w-100 bg-primary mt-5 rounded shadow">
-            <div class="row aling-items-stretch">
-              <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Diseño de loguin -->
+        <div class="container w-100 bg-primary mt-1 rounded shadow">
+          <div class="row aling-items-stretch">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+            </div>
+            <div class="col bg-white rounded-end">
+              <div class="text-center">
+                <img src="/assets/img/arg-programa.png" width="150px" alt="">
               </div>
-              <div class="col bg-white rounded-end">
-                <div class="text-center">
-                  <img src="/assets/img/arg-programa.png" width="200px" alt="">
+
+              <h2 class="fw-bold text-center py-2 mb-2">Bienvenido</h2>
+              <!-- Loguin -->
+              <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                <div class="mb-2"><label for="email" class="form-label">Correo Electronico</label>
+                  <input type="email" class="form-control" formControlName="email">
+                </div>
+                
+                <div *ngIf="Mail?.errors && Mail?.touched">
+                  <P *ngIf="Mail?.hasError('required')" class="error">
+                    El email es requerido.
+                  </P>
+                  <P *ngIf="Mail?.hasError('email')" class="error">
+                    Formato de email inválido.
+                  </P>
                 </div>
 
-                <h2 class="fw-bold text-center py-2 mb-2">Bienvenido</h2>
-                <!-- Loguin -->
-                <form action="#">
-                  <div class="mb-2"><label for="email" class="form-label">Correo Electronico</label>
-                    <input type="email" class="form-control" name="email">
-                  </div>
+                <div class="mb-2"><label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" formControlName="password">
+                </div>
 
-                  <div class="mb-4"><label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password">
-                  </div>
-                  <div class="d-grid">
-                    <form>
-                      <button type="submit" formaction="" class="btn btn-primary" >Iniciar Secion</button>
-                    </form>
-                  </div>
-                  <div class="my3">
-                    <span>No tienes cuenta? <a href="#">Registrate</a></span><br>
-                    <span><a href="#">Recuperar Password</a></span>
-                  </div>
-                </form>
-              </div>
+                <div *ngIf="Password?.errors && Password?.touched">
+                  <P *ngIf="Password?.hasError('required')" class="error">
+                    El Password es requerido.
+                  </P>
+                  <P *ngIf="Password?.errors?.['minlength']" class="error">
+                    El Password debe ser de 8 o mas caracteres.
+                  </P>
+                </div>
+
+                <div class="d-grid mb-3 mt-3 text-center">
+                  <form>
+                    <button type="submit" formaction="" class="btn btn-primary">Iniciar Secion</button>
+                  </form>
+                </div>
+                <!-- <div class="my3">
+                  <span>No tienes cuenta? <a href="#">Registrate</a></span><br>
+                  <span><a href="#">Recuperar Password</a></span>
+                </div> -->
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Fin de loguin -->
+</div>
+<!-- Fin de loguin -->

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -26,6 +27,7 @@ import { ModalMailComponent } from './modal-mail/modal-mail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ModalCurriculumComponent } from './modal-curriculum/modal-curriculum.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { from } from 'rxjs';
 
 
 
@@ -60,7 +62,9 @@ import { InicioComponent } from './inicio/inicio.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

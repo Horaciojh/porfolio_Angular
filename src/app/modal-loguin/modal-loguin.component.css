@@ -4,3 +4,9 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  .error{
+    color: rgb(217, 26, 26);
+    font-size: 15px;
+    text-align: center;
+  }

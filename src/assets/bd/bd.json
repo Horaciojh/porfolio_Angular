@@ -118,39 +118,34 @@
 
 ],
 
-    "a":[
+    "software":[
     {
         "id":1,
         "nombre": "HTML",
-        "tecnologia": "HTML",
         "porcentaje": "50"
     },
 
     {
         "id":2,
         "nombre": "ANGULAR",
-        "tecnologia": "Angular",
         "porcentaje": "70"
     },
 
     {
         "id":3,
         "nombre": "JAVA",
-        "tecnologia": "HTML",
         "porcentaje": "50"
     },
 
     {
         "id":4,
         "nombre": "SQL",
-        "tecnologia": "Angular",
         "porcentaje": "20"
     },
 
     {
         "id":5,
         "nombre": "OFIMATICA (EXEL WORD)",
-        "tecnologia": "Angular",
         "porcentaje": "50"
     }
 
@@ -161,7 +156,6 @@
     {
         "id":1,
         "nombre": "TRABAJO EN EQUIPO",
-        "tecnologia": "HTML",
         "porcentaje": "35"
     },
 
@@ -179,7 +173,7 @@
 
     {
         "id":4,
-        "nombre": "RECLUTAMIENTO",
+        "nombre": "CAPACITACION",
         "porcentaje": "5"
     }    
 ],
