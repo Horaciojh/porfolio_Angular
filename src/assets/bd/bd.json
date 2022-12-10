@@ -18,45 +18,58 @@
     {
         "id":1,
         "titulo": "Nivel Primario",
-        "descripcion": "Egrese Instituto Santa Ana."
+        "descripcion": "Egrese en el año 1900 del Instituto Santa Ana.",
+        "estado": "Completo"
+       
     },
 
     {
         "id":2,
         "titulo": "Nivel Secundario",
-        "descripcion": "Curse 1º y 2º año de la “Facultad de Ciencias Económicas” En la ciudad de Paraná Entre Ríos."
+        "descripcion": "Curse 1º y 2º año de la “Facultad de Ciencias Económicas” En la ciudad de Paraná Entre Ríos.",
+        "estado": "Completo"
+        
     },
 
     {
         "id":3,
         "titulo": "Nivel Universitario",
-        "descripcion": "Curse 1º y 2º año de la “Facultad de Ciencias Económicas” En la ciudad de Paraná Entre Ríos."
+        "descripcion": "Curse 1º y 2º año de la “Facultad de Ciencias Económicas” En la ciudad de Paraná Entre Ríos.",
+        "estado": "Completo"
+       
     },
 
     {
         "id":4,
         "titulo": "Cursos 1",
-        "descripcion": "Cursos de Capacitación realizado por la empresa TIA S. A.: “Calidad de Servicio”, “Manejo y Gestión de Mercadería”, “Recursos Humanos”, “Marketing y Negociación”, “Selección de Personal”, “Mix y Márgenes”."
+        "descripcion": "Cursos de Capacitación realizado por la empresa TIA S. A.: “Calidad de Servicio”, “Manejo y Gestión de Mercadería”, “Recursos Humanos”, “Marketing y Negociación”, “Selección de Personal”, “Mix y Márgenes”.",
+        "estado": "Completo"
+        
     },
 
     {
         "id":5,
         "titulo": "Cursos 2",
-        "descripcion": "Curso dictado por la empresa SELF de “Programa de Management 2003”."
+        "descripcion": "Curso dictado por la empresa SELF de “Programa de Management 2003”.",
+        "estado": "Completo"
+        
     },
 
     {
         "id":6,
         "titulo": "Cursos 3",
-        "descripcion": "En curso ultima tres materias “Analista en sistema de la información” en el Instituto Raúl Scalabrini Ortiz - Bs As."
+        "descripcion": "En curso ultima tres materias “Analista en sistema de la información” en el Instituto Raúl Scalabrini Ortiz - Bs As.",
+        "estado": "En curso"
+        
     },
     {
         "id":7,
         "titulo": "Cursos 3 ARGENTINA PROGRAMA",
-        "descripcion": "SDGLFEKFGJKIOEGHJKDFHBGMKLADFMGHLKJHGKRTJHKAMDFHBGAHGK"
+        "descripcion": "SDGLFEKFGJKIOEGHJKDFHBGMKLADFMGHLKJHGKRTJHKAMDFHBGAHGK",
+        "estado": "Incompleto"
+        
     }
-
-
+    
 ],
 
 "trabajo":[
@@ -208,7 +221,6 @@
         "id": "1",
         "nombre": "Faceboock",
         "direccion": "www:/faceboock.com",
-        "logo": "../assets/img/Proyecto-3.jpg",
         "clase": "bi bi-facebook"
     },
 
@@ -216,7 +228,6 @@
         "id": "2",
         "nombre": "Twitter",
         "direccion": "www:/faceboock.com",
-        "logo": "../assets/img/Proyecto-3.jpg",
         "clase": "bi bi-twitter"
     },
 
@@ -224,7 +235,6 @@
         "id": "3",
         "nombre": "Gmail",
         "direccion": "www:/faceboock.com",
-        "logo": "../assets/img/Proyecto-3.jpg",
         "clase": "bi bi-google"
     },
 
@@ -232,7 +242,6 @@
         "id": "4",
         "nombre": "Instagram",
         "direccion": "www:/faceboock.com",
-        "logo": "../assets/img/Proyecto-3.jpg",
         "clase": "bi bi-instagram"
     },
 
@@ -240,7 +249,6 @@
         "id": "5",
         "nombre": "Linkedin",
         "direccion": "www:/faceboock.com",
-        "logo": "../assets/img/Proyecto-3.jpg",
         "clase": "bi bi-linkedin"
     },
 
@@ -248,7 +256,6 @@
         "id": "6",
         "nombre": "Github",
         "direccion": "www:/faceboock.com",
-        "logo": "../assets/img/Proyecto-3.jpg",
         "clase": "bi bi-github"
     }
 
