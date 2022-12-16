@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-modal-banner',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal-banner.component.css']
 })
 export class ModalBannerComponent implements OnInit {
+  contactForm = new FormGroup({
+    
+  })
 
   constructor() { }
 

@@ -1,40 +1,97 @@
 <!-- Datos Personales -->
 <div class="modal fade" id="DatosPersonal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Datos Personales</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Datos Personales</h5>
+        <!-- <pre>
+            {{contactForm.value | json}}
+          </pre>
+          <pre>
+            {{contactForm.valid}}
+          </pre> -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="contactForm" (ngSubmit)="onEnviar($event)">
         <div class="modal-body">
           <div class="row">
             <div class="col">
-              <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido"><br>
-              <input type="text" class="form-control" placeholder="Fecha de Nacimiento" aria-label="Fecha Nac"><br>
-              <input type="text" class="form-control" placeholder="Lugar de Residencia" aria-label="Residencia"><br>
-              <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+              <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido"
+                formControlName="Apellido" [ngClass]="{
+              'is-invalid': validarDatos('Apellido')}" />
+              <div class="invalid-feedback">
+                <!-- <span *ngIf="contactForm.get('Apellido')?.errors">Minimo 3 caracteres </span> -->
+                <span *ngIf="contactForm.get('Apellido')?.errors?.['required']">El campo es requerido</span>
+              </div><br>
+
+              <input type="text" class="form-control" placeholder="Fecha de Nacimiento" aria-label="Fecha Nac"/>
+              <br>
+
+              <input type="text" class="form-control" placeholder="Residencia" aria-label="Residencia"
+                formControlName="Residencia" />
+                <!-- [ngClass]="{
+                'is-invalid': validarDatos('Residencia')}" />
+              <div class="invalid-feedback">
+                <span *ngIf="contactForm.get('Residencia')?.errors">Minimo 3 caracteres </span>
+                <span *ngIf="contactForm.get('Residencia')?.errors?.['required']">El campo es requerido</span>
+              </div> --><br>
+
+              <input type="text" class="form-control" placeholder="Email" aria-label="Email" formControlName="Email"
+                [ngClass]="{
+                'is-invalid': validarDatos('Email')}" />
+                <div class="invalid-feedback">
+                  <!-- {{ contactForm.get("Apellido")?.errors  | json}}    -->
+                  <span *ngIf="contactForm.get('Email')?.errors">Ingrese Mail Valido </span>
+                  <span *ngIf="contactForm.get('Email')?.errors?.['required']">El campo es requerido</span>
+                </div>
+              <br>
             </div>
+
             <div class="col">
-              <input type="text" class="form-control" placeholder="Nombre/s" aria-label="Nombre"><br>
-              <input type="text" class="form-control" placeholder="Edad" aria-label="Edad"><br>
-              <input type="text" class="form-control" placeholder="Nacionalidad" aria-label="Nacionalidad"><br>
-              <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono">
+              <input type="text" class="form-control" placeholder="Nombre/s" aria-label="Nombre"
+                formControlName="Nombre" [ngClass]="{
+                'is-invalid': validarDatos('Nombre')}" />
+              <div class="invalid-feedback">
+                <!-- <span *ngIf="contactForm.get('Nombre')?.errors">Minimo 3 caracteres </span> -->
+                <span *ngIf="contactForm.get('Nombre')?.errors?.['required']">El campo es requerido</span>
+              </div><br>
+
+              <input type="text" class="form-control" placeholder="Edad" aria-label="Edad" formControlName="Edad" />
+              <br>
+
+              <input type="text" class="form-control" placeholder="Nacionalidad" aria-label="Nacionalidad"/>
+              <br>
+
+              <input type="text" class="form-control" placeholder="Telefono" aria-label="Telefono"
+                formControlName="Telefono" [ngClass]="{
+                'is-invalid': validarDatos('Telefono')}" />
+              <div class="invalid-feedback">
+                <!-- {{ contactForm.get("Apellido")?.errors  | json}}    -->
+                <span *ngIf="contactForm.get('Telefono')?.errors">Minimo 8 caracteres </span>
+                <span *ngIf="contactForm.get('Telefono')?.errors?.['required']">El campo es requerido</span>
+              </div><br>
             </div>
           </div><br>
           <div class="col">
             <div class="form-floating">
               <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                style="height: 100px"></textarea>
+                style="height: 100px" formControlName="Descripcion"[ngClass]="{
+                  'is-invalid': validarDatos('Descripcion')}" ></textarea>
+                  <div class="invalid-feedback">
+                    <!-- {{ contactForm.get("Apellido")?.errors  | json}}    -->
+                    <span *ngIf="contactForm.get('Descripcion')?.errors">Maximo 200 caracteres </span>
+                    <span *ngIf="contactForm.get('Descripcion')?.errors?.['required']">El campo es requerido</span>
+                  </div>
               <label for="floatingTextarea2">Descripcion Personal</label>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             <button type="button" class="btn btn-primary">Nueva Informacion</button>
-            <button type="button" class="btn btn-primary">Guardar Todo</button>
+            <button type="submit" class="btn btn-primary">Guardar Todo</button>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
-  <!-- Fin Datos Personales -->
+</div>

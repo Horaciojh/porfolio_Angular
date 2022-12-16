@@ -10,3 +10,10 @@
     font-size: 15px;
     text-align: center;
   }
+  .border-invalid{
+    border-color: red;
+  }
+
+  .border-valid{
+    border-color: green;
+  }

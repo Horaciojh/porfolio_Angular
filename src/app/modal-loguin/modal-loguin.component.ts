@@ -11,9 +11,18 @@ export class ModalLoguinComponent implements OnInit {
  form: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {    //formsBuilder es un alias puede ser cualquier nombre
-    this.form=this.formBuilder.group({
-      password:['',[Validators.required, Validators.minLength(8)]],// datos requerido y definicion de longitud de la pasword
+    this.form=this.formBuilder.group(
+      {
       email:['',[Validators.required, Validators.email]], // datos requeridos y validacion de mail
+      password:['',[Validators.required, Validators.minLength(8)]],// datos requerido y definicion de longitud de la pasword
+   
+      // lo que sigue lo saque del la master class modulo 8 y no se que hace 
+    //   deviceInfo:this.formBuilder.group({
+    //   deviceId: ["17867868768"],
+    //   deviceType: ["DEVICE_TYPE_ANDROID"],    
+    //   notificationToken: ["67657575eececc34"]
+    // }) 
+    
     })
    }
 
@@ -40,10 +49,8 @@ export class ModalLoguinComponent implements OnInit {
       return this.Mail?.touched && !this.Mail?.valid;
     }
 
-    
-
+  
     onEnviar(event: Event){
-
       event.preventDefault;
 
       if (this.form.valid){

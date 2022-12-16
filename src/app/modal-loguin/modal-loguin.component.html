@@ -20,7 +20,8 @@
               <!-- Loguin -->
               <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div class="mb-2"><label for="email" class="form-label">Correo Electronico</label>
-                  <input type="email" class="form-control" formControlName="email">
+                  <input type="email" class="form-control" formControlName="email"  [class.border-invalid]="MailValid" [class.border-valid]="!MailValid">
+                  <!-- [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}" -->
                 </div>
                 
                 <div *ngIf="Mail?.errors && Mail?.touched">
@@ -33,7 +34,7 @@
                 </div>
 
                 <div class="mb-2"><label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" formControlName="password">
+                  <input type="password" class="form-control" formControlName="password" [class.border-invalid]="PasswordValid" [class.border-valid]="!PasswordValid">
                 </div>
 
                 <div *ngIf="Password?.errors && Password?.touched">
@@ -46,9 +47,9 @@
                 </div>
 
                 <div class="d-grid mb-3 mt-3 text-center">
-                  <form>
+                  
                     <button type="submit" formaction="" class="btn btn-primary">Iniciar Secion</button>
-                  </form>
+                  
                 </div>
                 <!-- <div class="my3">
                   <span>No tienes cuenta? <a href="#">Registrate</a></span><br>

@@ -1,36 +1,33 @@
-<!-- Sofware -->
 <div class="modal fade" id="HabilidadesSoftware" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="staticBackdropLabel">Agregar o Quitar Habilidad en Sofware</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-      <div class="col-12">
-        <div class="list-group">
-          <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
-            Habilidad-1
-          </button>
-          <button type="button" class="list-group-item list-group-item-action">Habilidad-2</button>
-          <button type="button" class="list-group-item list-group-item-action">Habilidad-3</button>
-          <button type="button" class="list-group-item list-group-item-action">Habilidad-4</button>
-          <button type="button" class="list-group-item list-group-item-action" disabled>Habilidad-5</button>
-        </div>
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel" >Nueva Habilidad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <br>
-      <div class="col w-25 mx-3">
-        <label for="validationDefault05" class="form-label">% Aprendizaje</label>
-        <input type="text" class="form-control" id="validationDefault05" required>
+      <body class="modal-body">
+        <form [formGroup]="contactForm" (ngSubmit)="onEnviar($event)">
+          <div class="col-12 mx-auto">
+            <input type="text" class="form-control " placeholder="Habilidad" aria-label="Nombre" formControlName="Nombre"
+              [ngClass]="{
+            'is-invalid': validarDatos('Nombre')}" />
+            <div class="invalid-feedback">
+              <span *ngIf="contactForm.get('Nombre')?.errors">La nueva Habilidad es requerida </span>
+            </div>
+            <br>
+            <input type="text" class="form-control " placeholder="Porcentaje" aria-label="Porcentaje" formControlName="Porcentaje"
+              [ngClass]="{'is-invalid': validarDatos('Porcentaje')}" />
+            <div class="invalid-feedback">
+              <span *ngIf="contactForm.get('Porcentaje')?.errors">El campo es requerido</span>
+            </div>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" class="btn btn-primary">Nueva</button>
+            <button type="submit" class="btn btn-primary">Guardar Todo</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger">Eliminar</button>
+          </div>
+        </form>
+      </body>
       </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-danger">Eliminar</button>
-      <button type="button" class="btn btn-primary">Nuevo Habilidad</button>
-      <button type="button" class="btn btn-primary">Guardar Todo</button>
-    </div>
-  </div>
-</div>
-</div>
-<!-- Fin Sofware -->

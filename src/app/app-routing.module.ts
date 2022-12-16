@@ -6,7 +6,6 @@ import { ModalLoguinComponent } from './modal-loguin/modal-loguin.component';
 const routes: Routes = [
   {path:'',component:InicioComponent},
   
-  
   // {phat: 'dashboard', component:DashboardComponent},
   // {path:'',redirectTo:'/', pathMatch:'full'},
   // {path:'**', component:ErrorComponent}
